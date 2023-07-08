@@ -4,8 +4,9 @@ const Header = ({ links }) => {
   const [btn, setBtn] = useState(false);
   const btnToggle = () => setBtn(!btn);
   let classes =
-    "hidden max-[970px]:fixed p-[20px] max-[970px]:flex max-[970px]:h-[100vh] max-[970px]:bg-white max-[970px]:top-0 max-[970px]:left-[-100%] max-[970px]:w-[60%] max-[970px]:flex-col gap-[64px] duration-200 ";
+    "hidden max-[970px]:fixed p-[20px] max-[970px]:flex max-[970px]:h-[100vh] max-[970px]:bg-white max-[970px]:top-0 max-[970px]:left-[-100%] max-[970px]:w-[60%] max-[970px]:flex-col gap-[64px] duration-300 ";
   classes += btn && " max-[970px]:!left-0";
+
   return (
     <header className="py-[10px] px-[20px] flex justify-between items-center bg-white shadow-sm max-[970px]:py-[18px]">
       <a href="#">
@@ -17,13 +18,13 @@ const Header = ({ links }) => {
       </a>
       <nav className="navbar max-[970px]:hidden">
         <ul className="flex items-center gap-[32px]">
-          {links.map((link) => (
-            <li key={link}>
+          {links.map((url, index) => (
+            <li key={url.title}>
               <a
-                href="#"
+                href={url.link}
                 className="relative after:absolute after:transition-all after:block after:contents-[''] after:w-[0] after:h-[2px] after:bg-[#24255A] after:rounded-md hover:after:w-full"
               >
-                {link}
+                {url.title}
               </a>
             </li>
           ))}
@@ -85,13 +86,13 @@ const Header = ({ links }) => {
           </svg>
         </nav>
         <ul className="flex gap-[22px] max-[970px]:flex-col">
-          {links.map((link) => (
-            <li key={link}>
+          {links.map((url, index) => (
+            <li key={url.link}>
               <a
-                href="#"
+                href={url.link}
                 className="relative after:absolute after:transition-all after:block after:contents-[''] after:w-[0] after:h-[2px] after:bg-[#24255A] after:rounded-md hover:after:w-full"
               >
-                {link}
+                {url.title}
               </a>
             </li>
           ))}
