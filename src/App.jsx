@@ -1,8 +1,12 @@
 import Header from "./components/Header";
+import Hero from "./components/Hero";
+import { links } from "./data/links";
+
 const App = () => {
   return (
     <>
-      <Header />
+      <Header links={links} />
+      <Hero />
     </>
   );
 };
