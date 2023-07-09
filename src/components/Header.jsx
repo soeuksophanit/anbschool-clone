@@ -64,11 +64,13 @@ const Header = ({ links }) => {
       </div>
       <header className={classes}>
         <nav className="max-[970px]:flex max-[970px]:w-full items-center justify-between">
-          <img
-            className="w-[115px] h-[40px] justify-between"
-            src="./images/logo.JPG"
-            alt="logo"
-          />
+          <a href="#">
+            <img
+              className="w-[115px] h-[40px] justify-between"
+              src="./images/logo.JPG"
+              alt="logo"
+            />
+          </a>
           <svg
             onClick={btnToggle}
             xmlns="http://www.w3.org/2000/svg"
