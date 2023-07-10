@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.arrow:nth-child(5) {
+  display: none;
+}

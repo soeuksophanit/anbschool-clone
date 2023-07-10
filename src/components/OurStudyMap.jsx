@@ -2,7 +2,10 @@ import Card from "./Card";
 
 const OurStudyMap = ({ cards }) => {
   return (
-    <section className="our-study w-[1200px] mx-auto my-[64px] max-[1230px]:w-[97%]">
+    <section
+      id="#study-map"
+      className="our-study w-[1200px] mx-auto my-[64px] max-[1230px]:w-[97%]"
+    >
       <div className="our-study-info w-[80%] mx-auto text-center mb-[64px]">
         <h1 className="text-[48px] font-[600]">OUR STUDY MAP</h1>
         <div className="our-study-info">
